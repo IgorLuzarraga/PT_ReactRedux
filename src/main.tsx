@@ -7,6 +7,7 @@ import Login from "./pages/login/Login.tsx";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import { ShowUsers } from "./features/user/ShowUsers.tsx";
+import Landing from "./pages/landing/Landing.tsx";
 
 // import FormProfile from './components/FormProfile';
 // import AboutUs from './pages/AboutUs/AboutUs';
@@ -21,6 +22,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <AppContextProvider>
         <Routes>
           <Route path="/" element={<App />}>
+          <Route index element={<Landing />} />
+          <Route path="/home" element={<Landing />} />
             {/* <Route index element={<Home />} />
 
           <Route path="/ruteros" element={<Ruteros />} />
