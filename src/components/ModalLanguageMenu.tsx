@@ -41,7 +41,7 @@ const BtnSelectLanguage = ({
   setIsMenuToggled,
 }: BtnSelectLanguageProps) => (
   <button
-    className="flex justify-center items-center rounded-full bg-purple-300 w-8 h-8
+    className="flex justify-center items-center rounded-full text-black bg-purple-300 w-8 h-8
          text-nav-color hover:text-white transition duration-500"
     onClick={() => setIsMenuToggled(!isMenuToggled)}
   >
@@ -53,13 +53,6 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
   const { state } = useAppContext();
   const posHorizontal =
     state.appFlipped === "notFlipped" ? "right-0" : "left-0";
-
-  // const dispathActions = (selectedLanguage: SelectedLanguage) => {
-  //     dispatch({ type: 'setLanguage', payload: selectedLanguage })
-
-  //     const texts = importAppTexts(selectedLanguage)
-  //     dispatch({ type: 'setTexts', payload: texts })
-  // }
 
   return (
     <div
@@ -75,22 +68,6 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
 
       {/* MENU ITEMS */}
       <div className="ml-[18%] flex flex-col gap-10 text-xl text-purple-500">
-        {/* <div
-                    className={`${state.language === SelectedLanguage.English ? "text-white" : ""}
-              hover:text-white transition duration-500 
-                hover:cursor-pointer`}
-                    onClick={() => dispathActions(SelectedLanguage.English)}
-                >
-                    English
-                </div>
-                <div
-                    className={`${state.language === SelectedLanguage.Spanish ? "text-white" : ""}
-              hover:text-white transition duration-500 
-                hover:cursor-pointer`}
-                    onClick={() => dispathActions(SelectedLanguage.Spanish)}
-                >
-                    Spanish
-                </div> */}
         <ShowLanguageOptions />
       </div>
     </div>
