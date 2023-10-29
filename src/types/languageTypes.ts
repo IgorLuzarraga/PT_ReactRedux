@@ -25,6 +25,8 @@ export type TextsType = {
     welcome: string;
     viewLogin: string;
     visewUserList: string;
+    technicalTestPart1: string;
+    technicalTestPart2: string;
   };
   footer: {
     madeWithText: string;

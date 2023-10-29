@@ -23,9 +23,9 @@ const LandingText = ({ btnsInitPos }: Props) => {
     >
       <div className="flex justify-center md:justify-normal gap-[15px] text-5xl md:text-6xl font-playfair z-10">
         <div className="flex gap-1 text-center md:text-start">
-          <span>Technical </span>
+          <span>{state.texts.landing.technicalTestPart1}</span>
           <div className="flex flex-col gap-5">
-            <span className="text-purple-500">Test</span>
+            <span className="text-purple-500">{state.texts.landing.technicalTestPart2}</span>
           </div>
         </div>
       </div>

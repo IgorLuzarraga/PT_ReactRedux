@@ -35,8 +35,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #004643; */
-  background-color: whitesmoke;
+  background-color: #004643;
+  /* background-color: whitesmoke; */
   /* overflow: hidden; */
 }
 

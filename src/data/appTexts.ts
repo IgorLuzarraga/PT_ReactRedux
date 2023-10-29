@@ -32,7 +32,9 @@ export const engTexts: TextsType = {
     ● avatar
     ● email
     ● first name
-    ● last name`,
+    ● last name.`,
+    technicalTestPart1: "Technical",
+    technicalTestPart2: "Test",
   },
   footer: {
     madeWithText: "Made with",
@@ -76,7 +78,9 @@ Deberá mostrarse un listado de users obtenidos mediante la API. En este listado
 ● avatar
 ● correo electrónico
 ● nombre
-● apellido`,
+● apellido.`,
+    technicalTestPart1: "Prueba",
+    technicalTestPart2: "Técnica",
   },
   footer: {
     madeWithText: "Hecho con",
@@ -117,7 +121,9 @@ export const catTexts: TextsType = {
     ● avatar
     ● correu electrònic
     ● nom
-    ● cognom`,
+    ● cognom.`,
+    technicalTestPart1: "Prova",
+    technicalTestPart2: "Tècnica",
   },
   footer: {
     madeWithText: "Fet amb",

@@ -1,4 +1,3 @@
-import "./Login.css";
 import { useAppDispatch } from "../../app/hooks";
 import { useEffect, useState } from "react";
 import { FieldErrors, useForm } from "react-hook-form";
@@ -64,21 +63,17 @@ const Login = () => {
   }
 
   return (
-    // <div className="login-container">
     <div
-      className="mx-auto my-24 p-16 flex flex-col justify-center items-center
-                  bg-blue-900 shadow-2xl w-3/4 md:w-3/12"
+      className="mx-5 my-24 p-16 flex flex-col justify-center items-center
+                  bg-blue-900 shadow-2xl"
     >
-      {/* <div className="login-form-wrap"> */}
-      {/* <div className=""> */}
-      {/* <h2 className="login-title">Inicia sesión</h2> */}
-      <h2 className="text-2xl font-bold">{state.texts.loginForm.initSesion}</h2>
-      <p>{state.texts.loginForm.welcome}</p>
+      <div className="flex flex-col justify-center items-center gap-4">
+        <p className="text-2xl">{state.texts.loginForm.welcome}</p>
+        <h2 className="text-2xl font-bold">
+          {state.texts.loginForm.initSesion}
+        </h2>
+      </div>
 
-      {/* <form
-          className="login-form-container"
-          onSubmit={handleSubmit(formSubmit)}
-        > */}
       <form
         className="flex flex-col gap-7 justify-center items-center mt-9"
         onSubmit={handleSubmit(formSubmit)}
@@ -120,7 +115,7 @@ const Login = () => {
       </form>
 
       <div className="mt-10 flex flex-col justify-center items-center gap-4">
-        <p className="text-lg flex gap-2">
+        <p className="text-lg flex flex-col sm:flex-row gap-2 justify-center items-center">
           {state.texts.loginForm.areYouRegistered}
           <span className="hover:cursor-pointer hover:text-purple-400">
             {state.texts.loginForm.registerHere}
