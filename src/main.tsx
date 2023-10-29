@@ -9,13 +9,6 @@ import { store } from "./app/store";
 import { ShowUsers } from "./features/user/ShowUsers.tsx";
 import Landing from "./pages/landing/Landing.tsx";
 
-// import FormProfile from './components/FormProfile';
-// import AboutUs from './pages/AboutUs/AboutUs';
-// import { Home } from './pages/Home.jsx';
-// import Login from './pages/Login.jsx';
-// import Profile from './pages/Profile';
-// import Ruteros from './pages/Ruteros/Ruteros.jsx';
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter basename="/">
     <Provider store={store}>
@@ -24,14 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<App />}>
           <Route index element={<Landing />} />
           <Route path="/home" element={<Landing />} />
-            {/* <Route index element={<Home />} />
-
-          <Route path="/ruteros" element={<Ruteros />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-         
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-         */}
             <Route path="/login" element={<Login />} />
             <Route path="/users" element={<ShowUsers />} />
           </Route>

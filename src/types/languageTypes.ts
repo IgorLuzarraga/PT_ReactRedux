@@ -14,9 +14,8 @@ export type TextsType = {
   };
   landing: {
     welcome: string,
-    heading: string,
-    connectText: string,
-    contactBtn: string,
+    viewLogin: string,
+    visewUserList: string,
   }, 
   footer: {
     madeWithText: string;

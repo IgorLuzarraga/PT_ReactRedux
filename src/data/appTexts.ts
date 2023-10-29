@@ -16,11 +16,14 @@ export const engTexts: TextsType = {
   },
   landing: {
     welcome:
-      "Welcome to my project portfolio! Explore my front-end and full-stack projects. Each piece showcases my creative design and technical skills. From captivating user interfaces to robust back-end systems, my work reflects a passion for innovation. Click on any project to learn more about the technologies and challenges involved.",
-    heading:
-      "Behind every project lies a story of challenges overcome and new technologies mastered. Click on any project to dive deeper, discover the technologies used, and the creative problem-solving that went into it.",
-    connectText: "Let's connect and discuss how we can collaborate!",
-    contactBtn: "Let's talk",
+      "Welcome to my technical test! The test consists of a Single Page Application (SPA) using React and Redux, which connects to a test API. The goal is for the user to authenticate and access a list of users. If not authenticated, the user should not be able to access the list view.",
+      viewLogin:
+      "View: 'Login' This view should be displayed at the /login route in the browser. With the following endpoint [POST] https://reqres.in/api/login.",
+      visewUserList: `View: 'Listing' This view should be displayed at the /users route in the browser. A list of users obtained via the API should be displayed in this view. For each user in the list, the following details must be shown:
+    ● avatar
+    ● email
+    ● first name
+    ● last name`,
   },
   footer: {
     madeWithText: "Made with",
@@ -44,12 +47,18 @@ export const espTexts: TextsType = {
     requiredField: "Este campo es requerido",
   },
   landing: {
-    welcome:
-      "¡Bienvenido/a a mi portafolio de proyectos! Explora mis proyectos de front-end y full-stack. Cada pieza muestra mi habilidad creativa en diseño y mis habilidades técnicas. Desde interfaces de usuario cautivadoras hasta sistemas sólidos en el back-end, mi trabajo refleja una pasión por la innovación. Haz clic en cualquier proyecto para conocer más sobre las tecnologías y desafíos involucrados.",
-    heading:
-      "Detrás de cada proyecto se encuentra una historia de desafíos superados y nuevas tecnologías dominadas. Haz clic en cualquier proyecto para adentrarte más, descubrir las tecnologías utilizadas y la resolución creativa de problemas que lo acompañó.",
-    connectText: "¡Conectemos y hablemos sobre cómo podemos colaborar!",
-    contactBtn: "Hablemos",
+    welcome: `Bienvenido/a a mi prueba técnica!
+    La prueba consiste en una aplicación tipo SPA con React y Redux, la cual se conecte a una API de pruebas. El objetivo es que el usuario pueda autenticarse y, así acceder a un listado de users. Si no está autenticado, el usuario no deberá poder acceder a la vista de listado.`,    
+    viewLogin: `Vista: 'Login'
+    Esta vista deberá mostrarse en la ruta /login del navegador.
+    Con el siguiente endpoint [POST] https://reqres.in/api/login.`,    
+    visewUserList: `Vista: 'Listado'
+    Esta vista deberá mostrarse en la ruta /users del navegador.
+Deberá mostrarse un listado de users obtenidos mediante la API. En este listado, por cada user deberá mostrarse:
+● avatar
+● correo electrónico
+● nombre
+● apellido`,
   },
   footer: {
     madeWithText: "Hecho con",
@@ -74,11 +83,13 @@ export const catTexts: TextsType = {
   },
   landing: {
     welcome:
-      "¡Bienvenido/a a mi portafolio de proyectos! Explora mis proyectos de front-end y full-stack. Cada pieza muestra mi habilidad creativa en diseño y mis habilidades técnicas. Desde interfaces de usuario cautivadoras hasta sistemas sólidos en el back-end, mi trabajo refleja una pasión por la innovación. Haz clic en cualquier proyecto para conocer más sobre las tecnologías y desafíos involucrados.",
-    heading:
-      "Detrás de cada proyecto se encuentra una historia de desafíos superados y nuevas tecnologías dominadas. Haz clic en cualquier proyecto para adentrarte más, descubrir las tecnologías utilizadas y la resolución creativa de problemas que lo acompañó.",
-    connectText: "¡Conectemos y hablemos sobre cómo podemos colaborar!",
-    contactBtn: "Hablemos",
+      "Benvingut/da a la meva prova tècnica! La prova consisteix en una aplicació tipus SPA amb React i Redux, que es connecta a una API de proves. L'objectiu és que l'usuari pugui autenticar-se i, d'aquesta manera, accedir a un llistat d'usuaris. Si no està autenticat, l'usuari no hauria de poder accedir a la vista del llistat.",
+      viewLogin: "Vista: 'Login' Aquesta vista s'hauria de mostrar a la ruta /login del navegador. Amb l'endpoint següent [POST] https://reqres.in/api/login.",
+    visewUserList: `Vista: 'Llistat' Aquesta vista s'hauria de mostrar a la ruta /users del navegador. En aquesta vista s'hauria de mostrar un llistat de usuaris obtingut mitjançant l'API. En aquest llistat, per a cada usuari, s'haurien de mostrar els següents detalls:
+    ● avatar
+    ● correu electrònic
+    ● nom
+    ● cognom`,
   },
   footer: {
     madeWithText: "Fet amb",
