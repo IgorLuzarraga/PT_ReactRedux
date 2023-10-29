@@ -7,10 +7,10 @@ import { TextsType } from "../types/languageTypes";
 export const fromSelectedPageToPageName = (selectedPage: SelectedPage) =>
   match<SelectedPage>(selectedPage)
     .with(SelectedPage.Home, () => "Home")
-    .with(SelectedPage.Skills, () => "Skills")
-    .with(SelectedPage.Projects, () => "Projects")
-    .with(SelectedPage.Testimonials, () => "Testimonials")
-    .with(SelectedPage.Contact, () => "Contact")
+    // .with(SelectedPage.Skills, () => "Skills")
+    // .with(SelectedPage.Projects, () => "Projects")
+    // .with(SelectedPage.Testimonials, () => "Testimonials")
+    // .with(SelectedPage.Contact, () => "Contact")
     .with(SelectedPage.Login, () => "Login")
     // .with(SelectedPage.LogOut, () => "Logout")
     .exhaustive();

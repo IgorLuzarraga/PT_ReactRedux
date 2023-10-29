@@ -14,10 +14,10 @@ export type AppFlipType = AppNotFlipped | AppFlipped;
 
 export enum SelectedPage {
   Home = "home",
-  Skills = "skills",
-  Projects = "projects",
-  Testimonials = "testimonials",
-  Contact = "contact",
+  // Skills = "skills",
+  // Projects = "projects",
+  // Testimonials = "testimonials",
+  // Contact = "contact",
   Login = "login",
   // LogOut = "logout",
 }

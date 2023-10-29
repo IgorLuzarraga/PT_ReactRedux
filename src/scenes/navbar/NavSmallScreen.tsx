@@ -83,7 +83,7 @@ const ModalMenu = ({
         setSelectedPage={setSelectedPage}
       />
 
-      <Link
+      {/* <Link
         // page Skills
         page={SelectedPage.Skills}
         selectedPage={selectedPage}
@@ -106,7 +106,7 @@ const ModalMenu = ({
         page={SelectedPage.Contact}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
-      />
+      /> */}
 
       <ModalLanguageMenu />
     </div>

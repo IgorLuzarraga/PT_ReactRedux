@@ -1,9 +1,7 @@
 import { useState } from "react";
-// import { SelectedLanguage } from '../types/appType'
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { TbMessageLanguage } from "react-icons/tb";
 import { useAppContext } from "../context/appContextUtils";
-// import { importAppTexts } from "../utilities/utils";
 import ShowLanguageOptions from "./ShowLanguageOptions";
 
 type BtnSelectLanguageProps = {
