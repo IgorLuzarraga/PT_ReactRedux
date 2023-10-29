@@ -36,6 +36,9 @@ export const engTexts: TextsType = {
     technicalTestPart1: "Technical",
     technicalTestPart2: "Test",
   },
+  usersList: {
+    listOfUsers: "List of Users"
+  },
   footer: {
     madeWithText: "Made with",
     inText: "in",
@@ -82,6 +85,9 @@ Deberá mostrarse un listado de users obtenidos mediante la API. En este listado
     technicalTestPart1: "Prueba",
     technicalTestPart2: "Técnica",
   },
+  usersList: {
+    listOfUsers: "Lista de Usuarios"
+  },
   footer: {
     madeWithText: "Hecho con",
     inText: "en",
@@ -124,6 +130,9 @@ export const catTexts: TextsType = {
     ● cognom.`,
     technicalTestPart1: "Prova",
     technicalTestPart2: "Tècnica",
+  },
+  usersList: {
+    listOfUsers: "Llista d'usuaris",
   },
   footer: {
     madeWithText: "Fet amb",

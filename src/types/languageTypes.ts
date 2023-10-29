@@ -28,6 +28,9 @@ export type TextsType = {
     technicalTestPart1: string;
     technicalTestPart2: string;
   };
+  usersList: {
+    listOfUsers: string;
+  };
   footer: {
     madeWithText: string;
     inText: string;

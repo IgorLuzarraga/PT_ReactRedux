@@ -15,13 +15,14 @@ import { match } from "ts-pattern";
 import { filterUsersByName2 } from "../../utilities/usersUtils";
 import FilterByNameInput from "../../components/FilterByNameInput";
 import UserCard2 from "../../components/user/userCard/UserCard2";
+import { useAppContext } from "../../context/appContextUtils";
 
 export const ShowUsers = () => {
   const users = useAppSelector(selectUsers);
   const status = useAppSelector(selectStatus);
   const pageToDownload = useAppSelector(selectPageToDownload);
   const nameToFilter = useAppSelector(selectNameToFilter);
-
+  const { state } = useAppContext();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export const ShowUsers = () => {
   return (
     <div className="my-16">
       <div className="flex justify-center items-center text-4xl">
-        List of Users
+        {state.texts.usersList.listOfUsers}
       </div>
 
       <div className="py-20 flex flex-wrap justify-center items-center gap-8">
@@ -47,19 +48,6 @@ export const ShowUsers = () => {
     </div>
   );
 };
-
-// const mapUsersToData = (users: UsersType) =>
-//   users.map((user) => (
-//     <li key={user.id}>
-//       Name: {user.first_name}
-//       <br></br>
-//       Last Name: {user.last_name}
-//       <br></br>
-//       email: {user.email}
-//       <br></br>
-//       <img src={user.avatar} alt="User Avatar"></img>
-//     </li>
-//   ));
 
 const mapUsersToData = (users: UsersType) =>
   users.map((user) => <UserCard2 user={user} />);
