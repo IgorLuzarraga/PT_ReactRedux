@@ -11,8 +11,8 @@ type Props = {
 
 const Link = ({
   page, // selectedPage,
-  // setSelectedPage
-}: Props) => (
+} // setSelectedPage
+: Props) => (
   <>
     <PageNameMultiLanguage page={page} />
   </>

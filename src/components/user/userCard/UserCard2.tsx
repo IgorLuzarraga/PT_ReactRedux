@@ -16,7 +16,7 @@ const UserCard2 = ({ user }: Props) => {
   return (
     <div
       className="flex flex-col p-10 justify-center items-center text-black text-xl
-     bg-blue-100 hover:bg-white hover:shadow-xl rounded-3xl group"
+     bg-blue-100 hover:bg-white hover:shadow-white rounded-3xl group"
     >
       {user.first_name} {user.last_name}
       <ShowUserImage imageUrl={user.avatar} />

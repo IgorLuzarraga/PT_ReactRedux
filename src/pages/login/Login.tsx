@@ -2,23 +2,17 @@ import "./Login.css";
 import { useAppDispatch } from "../../app/hooks";
 import { useEffect, useState } from "react";
 import { FieldErrors, useForm } from "react-hook-form";
-// import { Link } from 'react-router-dom';
 import * as Option from "fp-ts/lib/Option";
 import { pipe } from "fp-ts/lib/function";
-
-// import { useAuth } from '../contexts/authContext';
-// import useLoginError from '../../hooks/useLoginError';
 import { loginUser } from "../../services/API_proyect/user.service";
 import { UserModelType, userModelEmpty } from "../../types/userTypes";
 import { useAppContext } from "../../context/appContextUtils";
-// import { setAuthUser } from "../../features/user/userSlice";
 
 const formConfig = {
   defaultValues: userModelEmpty,
 };
 
 const Login = () => {
-  //   const { register, handleSubmit } = useForm();
   const {
     register,
     handleSubmit,
@@ -30,7 +24,6 @@ const Login = () => {
   const { state } = useAppContext();
   const [loginOk, setLoginOk] = useState(false);
   const dispatch = useAppDispatch();
-  //   const { userlogin } = useAuth();
 
   //! ---------- FUNCION QUE GESTIONA LA DATA DEL FORMULARIO-----------------------
   const formSubmit = async (formData: UserModelType) => {
@@ -71,61 +64,72 @@ const Login = () => {
   }
 
   return (
-    <div className="login-container">
-      <div className="login-form-wrap">
-        <h2 className="login-title">Inicia sesión</h2>
+    // <div className="login-container">
+    <div
+      className="mx-auto my-24 p-16 flex flex-col justify-center items-center
+                  bg-blue-900 shadow-2xl w-3/4 md:w-3/12"
+    >
+      {/* <div className="login-form-wrap"> */}
+      {/* <div className=""> */}
+      {/* <h2 className="login-title">Inicia sesión</h2> */}
+      <h2 className="text-2xl font-bold">{state.texts.loginForm.initSesion}</h2>
+      <p>{state.texts.loginForm.welcome}</p>
 
-        <p>Bienvenido de nuevo!</p>
-
-        <form
+      {/* <form
           className="login-form-container"
           onSubmit={handleSubmit(formSubmit)}
-        >
+        > */}
+      <form
+        className="flex flex-col gap-7 justify-center items-center mt-9"
+        onSubmit={handleSubmit(formSubmit)}
+      >
+        <input
+          placeholder={`${state.texts.user.email}`}
+          className="bg-blue-300 text-black rounded-lg pl-3 p-1"
+          type="text"
+          id="email"
+          autoComplete="false"
+          {...register("email", { required: true })}
+        />
+        {showErrorFormField(errors.email, state.texts.formErrors.requiredField)}
+
+        <div className="flex flex-col">
           <input
-            placeholder={`${state.texts.user.email}`}
+            placeholder={`${state.texts.user.password}`}
             className=" bg-blue-300 text-black rounded-lg pl-3 p-1"
-            type="text"
-            id="email"
+            type="password"
+            id="password"
             autoComplete="false"
-            {...register("email", { required: true })}
+            {...register("password", { required: true })}
           />
           {showErrorFormField(
-            errors.email,
+            errors.password,
             state.texts.formErrors.requiredField,
           )}
+        </div>
 
-          <div className=" flex flex-col">
-            <input
-              placeholder={`${state.texts.user.password}`}
-              className=" bg-blue-300 text-black rounded-lg pl-3 p-1"
-              type="password"
-              id="password"
-              autoComplete="false"
-              {...register("password", { required: true })}
-            />
-            {showErrorFormField(
-              errors.password,
-              state.texts.formErrors.requiredField,
-            )}
-          </div>
+        <button
+          className="flex justify-center items-center p-3 w-36 h-10 bg-orange-400
+                   text-white rounded-[30px] hover:cursor-pointer 
+                    hover:bg-white hover:text-orange-400 transition duration-500"
+          type="submit"
+          disabled={send}
+        >
+          {state.texts.loginForm.loginBtn}
+        </button>
+      </form>
 
-          <button className="login-button" type="submit" disabled={send}>
-            Iniciar sesión
-          </button>
-        </form>
-      </div>
-
-      <div className="login-text">
-        <p className="parrafoLogin">
-          Estás registrado?
-          {/* <Link className="parrafoRegisterHere" to="/register"> */}
-          <span className="login-span-two">Registrate aquí</span>
-          {/* </Link> */}
+      <div className="mt-10 flex flex-col justify-center items-center gap-4">
+        <p className="text-lg flex gap-2">
+          {state.texts.loginForm.areYouRegistered}
+          <span className="hover:cursor-pointer hover:text-purple-400">
+            {state.texts.loginForm.registerHere}
+          </span>
         </p>
-        <p> Has olvidado la contraseña?</p>
-        {/* <Link to="/forgotpassword" className="anchorCustom"> */}
-        &nbsp;&nbsp;<span className="login-span-one">Cambiar Contraseña</span>
-        {/* </Link> */}
+        <p className="text-lg">{state.texts.loginForm.forgotYourPassword}</p>
+        <span className="hover:cursor-pointer hover:text-purple-400">
+          {state.texts.loginForm.changePassword}
+        </span>
       </div>
     </div>
   );

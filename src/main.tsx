@@ -15,8 +15,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <AppContextProvider>
         <Routes>
           <Route path="/" element={<App />}>
-          <Route index element={<Landing />} />
-          <Route path="/home" element={<Landing />} />
+            <Route index element={<Landing />} />
+            <Route path="/home" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/users" element={<ShowUsers />} />
           </Route>
