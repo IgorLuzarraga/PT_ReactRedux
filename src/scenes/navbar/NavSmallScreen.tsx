@@ -56,10 +56,7 @@ const Btn3Bars = ({ isMenuToggled, setIsMenuToggled }: Btn3BarsProps) => (
   </button>
 );
 
-const ModalMenu = ({
-  isMenuToggled,
-  setIsMenuToggled,
-}: ModalMenuProps) => (
+const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => (
   <div
     className="fixed right-0 bottom-0 z-40 h-full opacity-98 w-[180px] 
     bg-modal-menu-color drop-shadow-xl"
@@ -73,7 +70,7 @@ const ModalMenu = ({
 
     {/* MENU ITEMS */}
     <div className="ml-[18%] flex flex-col gap-10 text-2xl text-purple-500">
-      <ShowPagesLinks linksPos="Vertical"/>
+      <ShowPagesLinks linksPos="Vertical" />
       <ModalLanguageMenu />
     </div>
   </div>

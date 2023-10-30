@@ -8,7 +8,7 @@ const Landing = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section
+    <div
       id={fromSelectedPageToPageId(SelectedPage.Home)}
       className="md:flex mx-auto w-5/6 justify-between items-center gap-16 md:h-full 
             pt-5 pb-20"
@@ -23,7 +23,7 @@ const Landing = () => {
         {/* HEADINGS */}
         <LandingText btnsInitPos={-50} />
       </div>
-    </section>
+    </div>
   );
 };
 
