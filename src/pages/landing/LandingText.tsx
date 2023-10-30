@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useAppContext } from "../../context/appContextUtils";
 import SimpleTextFormatMultiLine from "../../components/textFormat/SimpleTextFormatMultiLine";
-// import SimpleTextFormatSingleLine from "../../components/textFormat/SimpleTextFormatSingleLine";
 
 type Props = {
   btnsInitPos: number;

@@ -34,7 +34,6 @@ export const reducer = (state: AppState, action: Action): AppState =>
       ...state,
       appFlipped: action.payload,
     }))
-    // .with(P._, () => state)
     .exhaustive();
 
 // Create the context

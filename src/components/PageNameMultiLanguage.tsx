@@ -15,9 +15,6 @@ const PageNameMultiLanguage = ({ page }: Props) => {
     match<SelectedPage>(page)
       .with(SelectedPage.Home, () => setPageName(state.texts.navbarMenu.home))
       .with(SelectedPage.Login, () => setPageName(state.texts.navbarMenu.login))
-      // .with(SelectedPage.LogOut, () =>
-      //   setPageName(state.texts.navbarMenu.logout),
-      // )
       .exhaustive();
   }, [page, state]);
 

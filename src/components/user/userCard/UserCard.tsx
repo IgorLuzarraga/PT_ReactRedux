@@ -1,6 +1,4 @@
-// import { IUserModel } from "../../../types/userTypes";
 import { UserType } from "../../../app/types/userTypes";
-// import { useAppContext } from "../../../context/appContextUtils";
 import { fromNullable, getOrElse, map, Option } from "fp-ts/Option";
 import { pipe } from "fp-ts/lib/function";
 
@@ -9,8 +7,6 @@ type Props = {
 };
 
 const UserCard = ({ user }: Props) => {
-  // const { state } = useAppContext();
-
   const getUserData = (key: keyof UserType) =>
     pipe(
       fromNullable(user[key]),

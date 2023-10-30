@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { SelectedPage } from "../../types/appType";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-// import Link from '../../components/Link'
 import Link from "../../components/links/Link";
 import ModalLanguageMenu from "../../components/ModalLanguageMenu";
 
@@ -82,31 +81,6 @@ const ModalMenu = ({
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-
-      {/* <Link
-        // page Skills
-        page={SelectedPage.Skills}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <Link
-        // page Projects
-        page={SelectedPage.Projects}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <Link
-        //page="Our Testimonials"
-        page={SelectedPage.Testimonials}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <Link
-        // page Contact Us
-        page={SelectedPage.Contact}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      /> */}
 
       <ModalLanguageMenu />
     </div>

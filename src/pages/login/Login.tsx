@@ -6,6 +6,12 @@ import { pipe } from "fp-ts/lib/function";
 import { loginUser } from "../../services/API_proyect/user.service";
 import { UserModelType, userModelEmpty } from "../../types/userTypes";
 import { useAppContext } from "../../context/appContextUtils";
+import Swal from "sweetalert2";
+import { Navigate } from "react-router-dom";
+import { authorized } from "../../app/types/authUser";
+import { setAuthUser } from "../../features/user/userSlice";
+import { AxiosResponse } from "axios";
+import { AxiosResponseData } from "../../types/axiosTypes";
 
 const formConfig = {
   defaultValues: userModelEmpty,
@@ -15,7 +21,6 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    // reset,
     formState: { errors },
   } = useForm<UserModelType>(formConfig);
   const [res, setRes] = useState<AxiosResponse>();
@@ -31,26 +36,10 @@ const Login = () => {
     setSend(false);
   };
 
-  //! ---------USEffect ASOCIADO A LA RES PARA GESTIONAR LOS ERRORES----------------
-  // useEffect(() => {
-  //   useLoginError(res, setLoginOk, userlogin);
-  // }, [res, userlogin]);
-
   useEffect(() => {
     console.log(res);
     handleLoginError(res, setLoginOk);
   }, [res]);
-
-  //   useEffect(() => {
-  //     const handleLoginError = () => {
-  //       // eslint-disable-next-line react-hooks/rules-of-hooks
-  //       useLoginError(res, setLoginOk, userlogin);
-  //     };
-
-  //     handleLoginError();
-  //   }, [res, userlogin]);
-
-  //! ---------- LOS CONDICIONALES QUE GESTIONAN LOS ESTADOS DE NAVEGACION--------------
 
   if (loginOk) {
     const axiosResponse = res as AxiosResponse<AxiosResponseData>;
@@ -143,18 +132,6 @@ const showErrorFormField = (
     ),
   );
 
-//
-
-// import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-import Swal from "sweetalert2";
-import { Navigate } from "react-router-dom";
-import { authorized } from "../../app/types/authUser";
-import { setAuthUser } from "../../features/user/userSlice";
-import { AxiosResponse } from "axios";
-import { AxiosResponseData } from "../../types/axiosTypes";
-// import { AxiosResponse } from 'axios';
-
-//const handleLoginError = (res: { response: { status: number; }; status: number; }, setLoginOk: (arg0: () => boolean) => void) => {
 const handleLoginError = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   res: any,
@@ -171,7 +148,7 @@ const handleLoginError = (
       text: "Internal Server Error ❎!",
       showConfirmButton: false,
       timer: 1500,
-      // customClass: 'custom-swal-bg',
+      customClass: "bg-blue-100",
     });
 
   if (res?.response?.status == 400)
@@ -181,7 +158,7 @@ const handleLoginError = (
       text: "User not found ❎!",
       showConfirmButton: false,
       timer: 1500,
-      // customClass: 'custom-swal-bg',
+      customClass: "bg-blue-100",
     });
 
   //! ---------- 200
@@ -193,10 +170,9 @@ const handleLoginError = (
       text: "Iniciado sesión con éxito ✅",
       showConfirmButton: false,
       timer: 1500,
-      // customClass: 'custom-swal-bg',
+      customClass: "bg-blue-100",
     });
   }
 };
 
-//
 export default Login;

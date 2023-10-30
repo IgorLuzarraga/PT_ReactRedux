@@ -7,12 +7,7 @@ import { TextsType } from "../types/languageTypes";
 export const fromSelectedPageToPageName = (selectedPage: SelectedPage) =>
   match<SelectedPage>(selectedPage)
     .with(SelectedPage.Home, () => "Home")
-    // .with(SelectedPage.Skills, () => "Skills")
-    // .with(SelectedPage.Projects, () => "Projects")
-    // .with(SelectedPage.Testimonials, () => "Testimonials")
-    // .with(SelectedPage.Contact, () => "Contact")
     .with(SelectedPage.Login, () => "Login")
-    // .with(SelectedPage.LogOut, () => "Logout")
     .exhaustive();
 
 const addSimbolPrefix = (input: string, simbol: string): string =>
@@ -37,11 +32,7 @@ export const importAppTexts = (selectedLanguage: SelectedLanguage): TextsType =>
     .with(SelectedLanguage.Catalan, () => catTexts)
     .exhaustive();
 
-// ------------------------------------------
-
 export const getTextFirstLine = (text: string) => text.split(".")[0] + ".";
 
 export const getTextExceptFirstLine = (text: string) =>
   text.substring(text.indexOf(".") + 1);
-
-// ------------------------------------------
