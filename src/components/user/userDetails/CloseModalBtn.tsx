@@ -4,7 +4,7 @@ const CloseModalBtn = ({ closeModal }: CloseModalBtnProps) => {
   return (
     <button
       type="button"
-      className="absolute top-2 left-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
+      className="absolute top-2 left-2 z-10 w-fit p-2 bg-blue-100 rounded-full"
       onClick={closeModal}
     >
       <img
