@@ -25,7 +25,9 @@ const LandingText = ({ btnsInitPos }: Props) => {
         <div className="flex gap-1 text-center md:text-start">
           <span>{state.texts.landing.technicalTestPart1}</span>
           <div className="flex flex-col gap-5">
-            <span className="text-purple-500">{state.texts.landing.technicalTestPart2}</span>
+            <span className="text-purple-500">
+              {state.texts.landing.technicalTestPart2}
+            </span>
           </div>
         </div>
       </div>

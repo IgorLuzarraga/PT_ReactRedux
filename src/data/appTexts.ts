@@ -37,7 +37,7 @@ export const engTexts: TextsType = {
     technicalTestPart2: "Test",
   },
   usersList: {
-    listOfUsers: "List of Users"
+    listOfUsers: "List of Users",
   },
   footer: {
     madeWithText: "Made with",
@@ -86,7 +86,7 @@ Deberá mostrarse un listado de users obtenidos mediante la API. En este listado
     technicalTestPart2: "Técnica",
   },
   usersList: {
-    listOfUsers: "Lista de Usuarios"
+    listOfUsers: "Lista de Usuarios",
   },
   footer: {
     madeWithText: "Hecho con",

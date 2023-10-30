@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { store } from "./app/store";
 import { ShowUsers } from "./features/user/ShowUsers.tsx";
 import Landing from "./pages/landing/Landing.tsx";
+import WithAuthProtection from "./components/HOC/WithAuthProtection.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter basename="/">
@@ -18,7 +19,16 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route index element={<Landing />} />
             <Route path="/home" element={<Landing />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/users" element={<ShowUsers />} />
+
+            <Route
+              path="/users"
+              element={
+                // Using the Protected component to protect this route
+                <WithAuthProtection>
+                  <ShowUsers />
+                </WithAuthProtection>
+              }
+            />
           </Route>
         </Routes>
       </AppContextProvider>
