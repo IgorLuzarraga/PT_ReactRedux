@@ -20,6 +20,8 @@ export default {
           DEFAULT: "rgba(59,60,152,0.03)",
           100: "rgba(59,60,152,0.02)",
         },
+        "nav-color": "rgb(21,16,48)",
+        "footer-color": "rgb(21,16,48)",
         grey: "#747A88",
         "grey-200": "#2B2C35",
         "orange-botones": "#f9bc60",

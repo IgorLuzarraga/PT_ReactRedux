@@ -20,7 +20,7 @@ const ProfileImg = () => {
       alt="profile image"
       className="hover:filter hover:grayscale transition duration-1000 
     h-14 w-14 rounded-full object-cover"
-      src="assets/people/profile-image.jpeg"
+      src="/webProject.png"
     />
   );
 };

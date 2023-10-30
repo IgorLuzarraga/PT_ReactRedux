@@ -19,7 +19,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const { state } = useAppContext();
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} flex justify-center h-32 z-40 bg-nav-color w-full fixed top-0`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         {isAboveMediumScreens ? (
           <>

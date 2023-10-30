@@ -7,17 +7,23 @@ import { AuthUser } from "../../app/types/authUser";
 import { useAppSelector } from "../../app/hooks";
 import LoginOutBtn from "../LoginOutBtn";
 
-const ShowPagesLinks = () => {
+type Props = {
+  linksPos: string;
+};
+
+const ShowPagesLinks = ({linksPos}: Props) => {
   const { state, dispatch } = useAppContext();
   const enumKeys = getEnumKeys();
   const userAuth = useAppSelector(selectUserAuth);
+  const classVertical = "flex flex-col gap-10"
+  const classHorizontal = "flex gap-3"
 
   const dispatchSelectedPage = (selectedPage: SelectedPage) => {
     dispatch({ type: "setSelectedPage", payload: selectedPage });
   };
 
   return (
-    <div className="flex gap-3">
+    <div className={`${linksPos === "Horizontal" ? classHorizontal : classVertical}`}>
       {enumKeys.map((key, index) => {
         return isAutorizedUser(key, userAuth) ? (
           <LoginOutBtn />

@@ -32,12 +32,12 @@ export const ShowUsers = () => {
   }, [dispatch, pageToDownload, status.kind]);
 
   return (
-    <div className="my-16">
-      <div className="flex justify-center items-center text-4xl">
+    <div className="my-10">
+      <div className="flex justify-center items-center text-4xl pt-8">
         {state.texts.usersList.listOfUsers}
       </div>
 
-      <div className="py-20 flex flex-wrap justify-center items-center gap-8">
+      <div className="py-14 flex flex-wrap justify-center items-center gap-8">
         {showUserList(status, users, nameToFilter)}
       </div>
 

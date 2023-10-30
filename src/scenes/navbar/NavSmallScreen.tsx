@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { SelectedPage } from "../../types/appType";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import Link from "../../components/links/Link";
 import ModalLanguageMenu from "../../components/ModalLanguageMenu";
+import ShowPagesLinks from "../../components/links/ShowPagesLinks";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -57,8 +57,6 @@ const Btn3Bars = ({ isMenuToggled, setIsMenuToggled }: Btn3BarsProps) => (
 );
 
 const ModalMenu = ({
-  selectedPage,
-  setSelectedPage,
   isMenuToggled,
   setIsMenuToggled,
 }: ModalMenuProps) => (
@@ -75,19 +73,7 @@ const ModalMenu = ({
 
     {/* MENU ITEMS */}
     <div className="ml-[18%] flex flex-col gap-10 text-2xl text-purple-500">
-      <Link
-        // page Home
-        page={SelectedPage.Home}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-
-      <Link
-        // page Login
-        page={SelectedPage.Login}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
+      <ShowPagesLinks linksPos="Vertical"/>
       <ModalLanguageMenu />
     </div>
   </div>
