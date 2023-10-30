@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         "black-100": "#2B2C35",
+        "modal-menu-color": "rgb(21,16,48)",
         "primary-blue": {
           DEFAULT: "#2B59FF",
           100: "#F5F8FF",

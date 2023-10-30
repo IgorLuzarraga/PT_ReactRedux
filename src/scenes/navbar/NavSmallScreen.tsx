@@ -82,6 +82,12 @@ const ModalMenu = ({
         setSelectedPage={setSelectedPage}
       />
 
+      <Link
+        // page Login
+        page={SelectedPage.Login}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
       <ModalLanguageMenu />
     </div>
   </div>
