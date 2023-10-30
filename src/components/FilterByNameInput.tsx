@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useAppDispatch } from "../app/hooks";
 import { setNameToFilter } from "../features/user/userSlice";
+import { useAppContext } from "../context/appContextUtils";
 
 const FilterByNameInput = () => {
   const [inputValue, setInputValue] = useState("");
+  const { state } = useAppContext();
   const dispatch = useAppDispatch();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +23,7 @@ const FilterByNameInput = () => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder="name to filter"
+        placeholder={state.texts.usersList.filterByName}
       />
     </div>
   );

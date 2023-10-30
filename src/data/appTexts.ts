@@ -38,6 +38,7 @@ export const engTexts: TextsType = {
   },
   usersList: {
     listOfUsers: "List of Users",
+    filterByName: "Name to filter",
   },
   footer: {
     madeWithText: "Made with",
@@ -87,6 +88,7 @@ Deberá mostrarse un listado de users obtenidos mediante la API. En este listado
   },
   usersList: {
     listOfUsers: "Lista de Usuarios",
+    filterByName: "Nombre a filtrar",
   },
   footer: {
     madeWithText: "Hecho con",
@@ -133,6 +135,7 @@ export const catTexts: TextsType = {
   },
   usersList: {
     listOfUsers: "Llista d'usuaris",
+    filterByName: "Nom per filtrar",
   },
   footer: {
     madeWithText: "Fet amb",

@@ -30,6 +30,7 @@ export type TextsType = {
   };
   usersList: {
     listOfUsers: string;
+    filterByName: string;
   };
   footer: {
     madeWithText: string;
