@@ -63,7 +63,7 @@ const ModalMenu = ({
   setIsMenuToggled,
 }: ModalMenuProps) => (
   <div
-    className="fixed right-0 bottom-0 z-40 h-full opacity-80 w-[180px] 
+    className="fixed right-0 bottom-0 z-40 h-full opacity-98 w-[180px] 
     bg-modal-menu-color drop-shadow-xl"
   >
     {/* CLOSE ICON */}

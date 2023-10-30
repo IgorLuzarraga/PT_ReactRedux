@@ -56,7 +56,7 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
 
   return (
     <div
-      className={`fixed top-[440px] md:top-0 ${posHorizontal} h-1/3 z-40 opacity-70 w-[160px] 
+      className={`fixed top-[240px] md:top-0 ${posHorizontal} h-1/3 z-40 opacity-98 w-[160px] 
         bg-modal-menu-color drop-shadow-xl`}
     >
       {/* CLOSE ICON */}
@@ -67,7 +67,7 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
       </div>
 
       {/* MENU ITEMS */}
-      <div className="ml-[18%] flex flex-col gap-10 text-xl text-purple-500">
+      <div className="ml-[18%] flex flex-col gap-10 text-xl text-purple-400">
         <ShowLanguageOptions />
       </div>
     </div>
