@@ -19,7 +19,7 @@ const FilterByNameInput = () => {
   return (
     <div>
       <input
-        className="text-2xl bg-blue-100"
+        className="text-2xl bg-blue-100 text-black"
         type="text"
         value={inputValue}
         onChange={handleInputChange}
