@@ -1,7 +1,7 @@
 How to Use the App::
 
 1. Clone the project.
-2. Go to the directory where you cloned the client.
+2. Go to the directory where you cloned the app.
 3. Run npm install.
 4. Execute npm run dev.
 5. Go to: http://localhost:5173/
