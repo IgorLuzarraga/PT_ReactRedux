@@ -29,4 +29,5 @@ View: 'Listing' This view should be displayed at the /users route in the browser
 ● first name
 ● last name.
 
-🔗 Experience CarDealer: Vercel: https://pt-react-redux.vercel.app/
+🔗 Experience the app:
+Vercel: https://pt-react-redux.vercel.app/
