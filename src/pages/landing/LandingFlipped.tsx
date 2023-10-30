@@ -11,7 +11,7 @@ const LandingFlipped = () => {
     <section
       id={fromSelectedPageToPageId(SelectedPage.Home)}
       className="md:flex mx-auto w-5/6 justify-between items-center gap-16 
-            md:h-full pt-14 pb-32"
+            md:h-full pt-5 pb-20"
     >
       {/* TEXT */}
       <div className="basis-3/5 mt-12 md:mt-32">

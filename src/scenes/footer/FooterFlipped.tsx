@@ -3,12 +3,12 @@ import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 const FooterFlipped = () => {
   return (
-    <footer className="h-32 bg-footer-color pt-10">
+    <footer className="h-40 w-full bg-footer-color flex justify-center items-center">
       <div className="mx-auto w-5/6">
-        <div className="md:flex md:justify-between text-center">
-          <MadeWithLove />
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center text-center">
+        <MadeWithLove />
           <SocialMediaIcons />
-          <p className="uppercase font-playfair text-2xl text-white">
+          <p className="hidden md:block uppercase font-playfair text-2xl text-white">
             Igor <span className="text-purple-500">Luzarraga</span>
           </p>
         </div>

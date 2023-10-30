@@ -16,6 +16,8 @@ import { filterUsersByName2 } from "../../utilities/usersUtils";
 import FilterByNameInput from "../../components/FilterByNameInput";
 import UserCard2 from "../../components/user/userCard/UserCard2";
 import { useAppContext } from "../../context/appContextUtils";
+import { AppState } from "../../types/appType";
+import { reverseArray } from "../../utilities/utilsArr";
 
 export const ShowUsers = () => {
   const users = useAppSelector(selectUsers);
@@ -38,7 +40,7 @@ export const ShowUsers = () => {
       </div>
 
       <div className="py-14 flex flex-wrap justify-center items-center gap-8">
-        {showUserList(status, users, nameToFilter)}
+        {showUserList(status, users, nameToFilter, state)}
       </div>
 
       <div className="flex flex-col gap-10 justify-center items-center">
@@ -52,18 +54,24 @@ export const ShowUsers = () => {
 const mapUsersToData = (users: UsersType) =>
   users.map((user) => <UserCard2 user={user} />);
 
-const showUsersData = (users: UsersType, nameToFilter: string) =>
-  pipe(users, filterUsersByName2(nameToFilter), mapUsersToData);
+const showUsersData = (users: UsersType, nameToFilter: string, state: AppState) => {
+  if (state.appFlipped === "notFlipped") {
+return pipe(users, filterUsersByName2(nameToFilter), mapUsersToData);
+  } else {
+    return pipe(users, reverseArray, filterUsersByName2(nameToFilter), mapUsersToData)
+  }
+}
 
 const showUserList = (
   status: Status,
   users: UsersType,
   nameToFilter: string,
+  state: AppState
 ) => {
   return match<Status>(status)
     .with(idle(), () => <div>Not init loading</div>)
     .with(loading(), () => <div>Loading...</div>)
-    .with(loaded(), () => showUsersData(users, nameToFilter))
+    .with(loaded(), () => showUsersData(users, nameToFilter, state))
     .with(failed(), () => <div>Error</div>)
     .exhaustive();
 };

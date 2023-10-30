@@ -1,16 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "./scenes/Header";
-import Footer from "./scenes/footer/Footer";
+import SelectFooter from "./scenes/footer/SelectFooter";
 
 const App = () => {
   return (
     <>
       <Header />
-      <main className="min-h-[720px] border-0 border-solid border-red-500 mt-20">
-        {/* <main className="border-0 border-solid border-red-500 mt-20"> */}
+      <main className="min-h-[720px] mt-20">
         <Outlet />
       </main>
-      <Footer />
+      <SelectFooter />
     </>
   );
 };
