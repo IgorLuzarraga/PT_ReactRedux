@@ -40,7 +40,7 @@ const Login = () => {
   useEffect(() => {
     console.log(res);
     handleLoginError(state, res, setLoginOk);
-  }, [res]);
+  }, [res, state]);
 
   if (loginOk) {
     const axiosResponse = res as AxiosResponse<AxiosResponseData>;
