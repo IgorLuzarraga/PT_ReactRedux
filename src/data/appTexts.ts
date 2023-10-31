@@ -20,6 +20,16 @@ export const engTexts: TextsType = {
     forgotYourPassword: "Forgot your password?",
     changePassword: "Change Password",
   },
+  loginAlert: {
+    title200: "Hello, welcome to our website!",
+    text200: "Session started successfully ✅",
+    title400: "Oops...",
+    text400: "User not found ❎!",
+  },
+  logoutAlert: {
+    title: "Success!",
+    text: "You've been securely logged out",
+  },
   formErrors: {
     requiredField: "This field is required",
   },
@@ -66,6 +76,16 @@ export const espTexts: TextsType = {
     registerHere: "Registrarse aquí",
     forgotYourPassword: "Has olvidado la contraseña?",
     changePassword: "Cambiar la contraseña",
+  },
+  loginAlert: {
+    title200: "¡Hola, bienvenida/o a nuestra web!",
+    text200: "Sesión iniciada con éxito ✅",
+    title400: "Oops...",
+    text400: "Usuaria/o no encontrado ❎!",
+  },
+  logoutAlert: {
+    title: "¡Éxito!",
+    text: "Te has desconectado de forma segura",
   },
   formErrors: {
     requiredField: "Este campo es requerido",
@@ -116,6 +136,16 @@ export const catTexts: TextsType = {
     registerHere: "Registra't aquí",
     forgotYourPassword: "Has oblidat la contrasenya?",
     changePassword: "Canviar la contrasenya",
+  },
+  loginAlert: {
+    title200: "¡Hola, benvingut a la nostra web!",
+    text200: "Sessió iniciada amb èxit ✅",
+    title400: "Oops...",
+    text400: "Usuàri/a no trobat ❎!",
+  },
+  logoutAlert: {
+    title: "Èxit!",
+    text: "T'has desconnectat de manera segura",
   },
   formErrors: {
     requiredField: "Aquest camp és obligatori",

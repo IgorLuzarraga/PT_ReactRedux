@@ -18,6 +18,16 @@ export type TextsType = {
     forgotYourPassword: string;
     changePassword: string;
   };
+  loginAlert: {
+    title200: string;
+    text200: string;
+    title400: string;
+    text400: string;
+  };
+  logoutAlert: {
+    title: string;
+    text: string;
+  };
   formErrors: {
     requiredField: string;
   };

@@ -54,19 +54,28 @@ export const ShowUsers = () => {
 const mapUsersToData = (users: UsersType) =>
   users.map((user) => <UserCard2 user={user} />);
 
-const showUsersData = (users: UsersType, nameToFilter: string, state: AppState) => {
+const showUsersData = (
+  users: UsersType,
+  nameToFilter: string,
+  state: AppState,
+) => {
   if (state.appFlipped === "notFlipped") {
-return pipe(users, filterUsersByName2(nameToFilter), mapUsersToData);
+    return pipe(users, filterUsersByName2(nameToFilter), mapUsersToData);
   } else {
-    return pipe(users, reverseArray, filterUsersByName2(nameToFilter), mapUsersToData)
+    return pipe(
+      users,
+      reverseArray,
+      filterUsersByName2(nameToFilter),
+      mapUsersToData,
+    );
   }
-}
+};
 
 const showUserList = (
   status: Status,
   users: UsersType,
   nameToFilter: string,
-  state: AppState
+  state: AppState,
 ) => {
   return match<Status>(status)
     .with(idle(), () => <div>Not init loading</div>)

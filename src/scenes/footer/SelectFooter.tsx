@@ -3,13 +3,11 @@ import Footer from "./Footer";
 import FooterFlipped from "./FooterFlipped";
 
 const SelectFooter = () => {
-    const { state } = useAppContext();
+  const { state } = useAppContext();
 
   return (
-    <>
-    {state.appFlipped === "notFlipped" ? <Footer /> : <FooterFlipped />}
-    </>
-  )
-}
+    <>{state.appFlipped === "notFlipped" ? <Footer /> : <FooterFlipped />}</>
+  );
+};
 
-export default SelectFooter
+export default SelectFooter;

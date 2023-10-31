@@ -3,13 +3,11 @@ import Landing from "./Landing";
 import LandingFlipped from "./LandingFlipped";
 
 const SelectLanding = () => {
-    const { state } = useAppContext();
+  const { state } = useAppContext();
 
-return (
-  <>
-  {state.appFlipped === "notFlipped" ? <Landing /> : <LandingFlipped />}
-  </>
-)
-}
+  return (
+    <>{state.appFlipped === "notFlipped" ? <Landing /> : <LandingFlipped />}</>
+  );
+};
 
-export default SelectLanding
+export default SelectLanding;

@@ -9,3 +9,12 @@ export const loginUser = async (formData: UserModelType) => {
       return error;
     });
 };
+
+//! -------------------------LOGOUT ---------------------------------------
+export const logoutUser = async () => {
+  return API.post("logout")
+    .then((res) => res)
+    .catch((error) => {
+      return error;
+    });
+};

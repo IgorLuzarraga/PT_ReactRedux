@@ -12,6 +12,7 @@ import { authorized } from "../../app/types/authUser";
 import { setAuthUser } from "../../features/user/userSlice";
 import { AxiosResponse } from "axios";
 import { AxiosResponseData } from "../../types/axiosTypes";
+import { AppState } from "../../types/appType";
 
 const formConfig = {
   defaultValues: userModelEmpty,
@@ -38,7 +39,7 @@ const Login = () => {
 
   useEffect(() => {
     console.log(res);
-    handleLoginError(res, setLoginOk);
+    handleLoginError(state, res, setLoginOk);
   }, [res]);
 
   if (loginOk) {
@@ -133,6 +134,7 @@ const showErrorFormField = (
   );
 
 const handleLoginError = (
+  state: AppState,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   res: any,
   setLoginOk: (arg0: () => boolean) => void,
@@ -154,8 +156,8 @@ const handleLoginError = (
   if (res?.response?.status == 400)
     Swal.fire({
       icon: "error",
-      title: "Oops...",
-      text: "User not found ❎!",
+      title: `${state.texts.loginAlert.title400}`,
+      text: `${state.texts.loginAlert.text400}`,
       showConfirmButton: false,
       timer: 1500,
       customClass: "bg-blue-100",
@@ -166,8 +168,8 @@ const handleLoginError = (
     setLoginOk(() => true);
     Swal.fire({
       icon: "success",
-      title: "¡Hola, bienvenida/o a nuestra web!",
-      text: "Iniciado sesión con éxito ✅",
+      title: `${state.texts.loginAlert.title200}`,
+      text: `${state.texts.loginAlert.text200}`,
       showConfirmButton: false,
       timer: 1500,
       customClass: "bg-blue-100",
