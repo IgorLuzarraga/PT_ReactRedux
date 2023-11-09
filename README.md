@@ -17,9 +17,9 @@ How to Use the App::
 7. React Hook Form: Revolutionizing form management for efficiency and organization.
 8. @headlessui/react: fully accessible and customizable headless UI components for building user interfaces.
 
-Technical Test:
+App description:
 
-The test consists of a Single Page Application (SPA) using React and Redux, which connects to a test API. The goal is for the user to authenticate and access a list of users. If not authenticated, the user should not be able to access the list view.
+The app consists of a Single Page Application (SPA) using React and Redux, which connects to a test API. The goal is for the user to authenticate and access a list of users. If not authenticated, the user should not be able to access the list view.
 
 View: 'Login' This view should be displayed at the /login route in the browser. With the following endpoint [POST] https://reqres.in/api/login.
 
